@@ -1,4 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Montserrat&display=swap');
+
+body, html, #home {
+    overflow-x: hidden;
+    text-align: justify;
+}
 .caixa {
     padding: 60px 0;
-    border-bottom: 1px solid #e5e5e5;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+hr {
+    margin: 10px 60px 0px 60px;
+}
+p {
+    font-family: 'Karla', sans-serif;
+    font-size: 1em;
+}
+.btn-principal {
+    font-family: 'Karla', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+.btn-principal:hover {
+    width: 210px;
+    height: 50px;
+}
+.text-dark:hover {
+    color: #7e7272!important;
+}
+.card-md {
+    height: 200px;
 }

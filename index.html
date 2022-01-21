@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Bootstrap Ícones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
     <!-- Estilos personalizados CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Favicon do site -->
+    <link rel="icon" href="img/favicon.png">
 
     <title>Finans - finanças pessoais</title>
   </head>
@@ -22,58 +24,28 @@
     <header>
         <!-- NAVEGAÇÃO SUPERIOR -->
         <nav class="navbar navbar-expand-sm navbar-light bg-warning align-items-center">
-            <div class="container">
+            <div class="container d-flex justify-content-center">
                 <!-- LOGO -->
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <img src="img/logo.png" alt="Logo da Finans" width="142em">
                 </a>
-        
-                <!-- BOTÃO DE MENU -->
-                <button class="navbar-toggler ml-auto mr-2" data-toggle="collapse" data-target="#nav-target">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-        
-                <!-- OPÇÕES -->
-                <div class="collapse navbar-collapse" id="nav-target">
-                    <ul class="navbar-nav ml-auto" >
-                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Recursos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Benefícios</a></li>
-                        <li><a href="#"><button class="btn btn-outline-light">Entrar</button></a></li>
-                    </ul>
-                </div>
             </div>
         </nav>
     </header>
 
+    <!-- Apresentação do site -->
     <section class="bg-warning text-light" id="home">
         <div class="container">
             <div class="row">
                 <!-- COLUNA COM OS TEXTOS -->
                 <div class="col-md-6 d-flex">
                     <div class="align-self-center">
-                        <h1 class="display-4">Sua vida finaceira sob bons cuidados</h1>
-                        <p>Operando milagres financeiros para mais de 2 milhões de pessoas, venha fazer parte também, e começe a somar zeros à direta agora mesmo.</p>
+                        <h1 class="display-4 text-center">Seu braço direito na organização financeira</h1>
+                        <p class="text-justify">Oferecendo o melhor suporte para gerir seus orçamentos, sem custos e despesas.</p>
                         
-                        <!-- CAIXA CADASTRAR -->
-                        <form class="mt-4">
-                            <div class="form-group">
-                                <div class="input-group input-group-lg">
-                                    <input class="form-control" type="email" placeholder="Seu email..">
-                                    <div class="input-group-append">
-                                        <a class="btn btn-primary" href="#">Cadastre-se</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-
-                        <!-- BTN ANDROID E IOS-->
-                        <p>
-                            Disponível para: 
-                            <a class="btn btn-outline-light" href="#"><i class="fab fa-android fa-lg"></i></a>
-                            <a class="btn btn-outline-light" href="#"><i class="fab fa-apple fa-lg"></i></a>
-                        </p>
-
+                        <div class="d-flex justify-content-center mb-3">
+                            <a class="btn btn-primary btn-principal mt-3 text-center d-flex align-items-center" href="area-principal.html">Quero me gerenciar!</a>
+                        </div>
                     </div>
                 </div>
                 <!-- COLUNA COM A IMAGEM DA MULHER -->
@@ -88,19 +60,22 @@
             <div class="row">
                 <div class="col-md-6 d-flex">
                     <div class="align-self-center">
-                        <h2>Saiba para onde vai seu dinheiro</h2>
+                        <h2 class="text-center">Saiba para onde vai seu dinheiro</h2>
                         <p>
                             Com o Finans, você categoriza todos os seus lançamentos. 
                             Com gráficos simples, você sabe de onde vem e para onde vai o seu dinheiro.
                         </p>
-                        <a class="btn btn-primary" href="#">Veja mais</a>
+                        <div class="d-flex justify-content-center">
+                            <a class="btn btn-primary" href="#">Veja mais</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex">
-                    <img src="img/saiba.png" class="img-fluid">
+                    <img src="img/saiba.png" class="img-fluid" alt="Saiba para onde vai seu dinheiro">
                 </div>
             </div>
         </div>
+        <hr class="d-none d-md-block">
     </section>
 
     <!-- Seção Juros-->
@@ -108,20 +83,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 d-flex">
-                    <img src="img/juros.png" class="img-fluid">
+                    <img src="img/juros.png" class="img-fluid" alt="Pare de pagar juros e economize">
                 </div>
                 <div class="col-md-6 d-flex">
                     <div class="align-self-center">
-                        <h2>Pare de pagar juros e economize</h2>
+                        <h2  class="text-center">Pare de pagar juros e economize</h2>
                         <p>
                             Mantenha as contas em dia é sempre um problema? O Finans avisa você:
                             receba alertas de contas a pagar e a receber!
                         </p>
-                        <a class="btn btn-primary" href="#">Veja mais</a>
+                        <div class="d-flex justify-content-center">
+                            <a class="btn btn-primary" href="#">Veja mais</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <hr class="d-none d-md-block">
     </section>
 
     <!-- Seção Juros-->
@@ -130,51 +108,55 @@
             <div class="row">
                 <div class="col-md-4">
                     <img class="img-fluid" src="img/facil.png" alt="Fácil de usar">
-                    <h4>Fácil de usar</h4>
+                    <h4 class="text-center">Fácil de usar</h4>
                     <p>Uma interface simples e bastante sugestível que irá ajudar você a realizar todo o processo com facilidade.</p>
                 </div>
                 <div class="col-md-4">
                     <img class="img-fluid" src="img/economize.png" alt="Economize">
-                    <h4>Economize seu tempo</h4>
+                    <h4 class="text-center">Economize seu tempo</h4>
                     <p>Tempo é dinheiro! Em segundos você tem tudo sob controle e aproveite seu tempo com o que você realmente importa para você!</p>
                 </div>
                 <div class="col-md-4">
                     <img class="img-fluid" src="img/suporte.png" alt="Economize">
-                    <h4>Suporte amigo</h4>
+                    <h4 class="text-center">Suporte amigo</h4>
                     <p>Oferecendo ajuda 24hrs para fazer sua vida beem mais fácil e descomplicada.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="mt-4 mb-4">
+    <footer>
+        <hr class="d-block mb-3">
         <div class="container">
             <div class="row align-items-center"> 
                 <div class="col-md-8">
-                    <nav class="nav justify-content-sm-start">
-                        <a class="nav-link" href="#">Home</a>
-                        <a class="nav-link" href="#">Recursos</a>
-                        <a class="nav-link" href="#">Benefícios</a>
+                    <nav class="nav nav-pills flex-column flex-sm-row justify-content-sm-start">
+                        <a class="nav-link text-center text-dark" href="#">Home</a>
+                        <a class="nav-link text-center text-dark" href="#">Recursos</a>
+                        <a class="nav-link text-center text-dark" href="#">Benefícios</a>
                     </nav>
                 </div>
-                <div class="col-md-4">
-                    <a></a>
-                    <nav class="nav justify-content-sm-end">
-                        <a class="ml-3 btn btn-outline-dark" href="#"><i class="fab fa-facebook-square fa-lg"></i></a>
-                        <a class="ml-2 btn btn-outline-dark" href="#"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a class="ml-2 btn btn-outline-dark" href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                <div class="col-md-4 d-flex justify-content-center">
+                    <nav class="nav">
+                        <a class="ms-3 btn btn-outline-dark" href="#"><i class="fs-5 bi bi-facebook"></i></a>
+                        <a class="ms-2 btn btn-outline-dark" href="#"><i class="fs-5 bi bi-instagram"></i></a>
+                        <a class="ms-2 btn btn-outline-dark" href="#"><i class="fs-5 bi bi-twitter"></i></a>
                     </nav>
                 </div>
+            </div>
 
+            <div class="text-center mt-2 mb-3">
+                <p id="version">Versão x</p>
+                <p>© Copyright 2022 <strong>Samuel M. Teixeira</strong></p>
             </div>
         </div>
     </footer>
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Arquivos JS padrões -->
+    <script src="js/scripts.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>
