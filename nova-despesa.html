@@ -60,11 +60,62 @@
     <!-- area inicial-->
     <section>
         <div class="container mt-5">
-            
+            <h1 class="display-6 text-center mb-4">Registro de nova despesa</h1>
+
+            <!-- SELECTS PARA OS FILTROS DE CADASTRO -->
+            <div class="row">
+                <div class="col-md-3 needs-validation">
+                    <select class="form-select mb-4" id="ano" required >
+                        <option selected disabled value="">Ano</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Selecione um ano primeiro
+                    </div>
+                </div>
+                <div class="col-md-2 needs-validation">
+                    <select class="form-select mb-4" id="mes" required >
+                        <option selected disabled value="">Mês</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <select class="form-select mb-4" id="dia" required>
+                        <option selected disabled value="">Dia</option>
+                    </select>
+                </div>
+                <div class="col-md-5">
+                    <select class="form-select mb-4" id="tipo" required>
+                        <option selected disabled value="">Tipo</option>
+                        <option value="Alimentação">Alimentação</option>
+                        <option value="Lazer">Lazer</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- ENTRADAS PARA OS DADOS DA DESPESA -->
+            <div class="row">
+                <div class="col-md-5">
+                    <form class="form-floating mb-4 validacoes">
+                        <input class="form-control" id="cmp-descricao" type="text" placeholder="Descrição">
+                        <label for="cmp-descricao">Descrição</label>
+                    </form>
+                </div>
+                <div class="col-md-5 mb-4">
+                    <form class="form-floating">
+                        <input class="form-control" id="cmp-valor" type="text" placeholder="Valor">
+                        <label for="cmp-valor">Valor</label>
+                    </form>
+                </div>
+                <div class="col-md-2 mb-4 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary d-flex justify-content-center align-items-center" onclick="setCadastrarDespesas()"><i class="bi bi-plus-square-fill fs-3 me-2 ms-2"></i>Adicionar</button>
+                </div>
+            </div>
         </div>
     </section>
 
-    
+    <div class="d-none d-md-block">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
     <footer>
         <hr class="d-block mb-3">
         <div class="container">
@@ -91,6 +142,41 @@
             </div>
         </div>
     </footer>
+
+
+
+    <!-- CAMPO MODAL BOOTSTRAP -->
+    <!-- MODAL ERRO -->
+    <div class="modal fade" id="erroNewRegistro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title d-flex align-items-center text-danger" id="staticBackdropLabel"><i class="fs-4 bi bi-exclamation-square me-2"></i> Impossível efetuar um novo registro</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">Ops... algum campo ficou vazio! preencha os lacunas vazias e tente novamente.</div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Corrigir</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- MODAL SUCESSO -->
+    <div class="modal fade" id="sucessoNewRegistro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title d-flex align-items-center text-success" id="staticBackdropLabel">Registro efetuado com sucesso</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">Os dados foram salvos e registrados com sucesso!</div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+        </div>
+    </div>
 
 
     <!-- Arquivos JS padrões -->
