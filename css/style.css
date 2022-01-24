@@ -37,3 +37,6 @@ p {
 .card-md {
     height: 200px;
 }
+#tabela-registros {
+    min-height: 530px;
+}

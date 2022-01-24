@@ -19,7 +19,7 @@
 
     <title>Finans - finanças pessoais</title>
   </head>
-  <body>
+  <body onload="setPreencherGrid()">
     <!-- CABEÇALHO DA PÁGINA -->
     <header>
         <!-- NAVEGAÇÃO SUPERIOR -->
@@ -60,11 +60,75 @@
     <!-- area inicial-->
     <section>
         <div class="container mt-5">
+            <h1 class="display-6 text-center mb-3 mb-md-5">Consulta de despesas</h1>
+
+            <!-- SELECTS PARA OS FILTROS DE CONSULTA -->
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-2">
+                    <select class="form-select mb-4" id="dia" required>
+                        <option selected disabled value="">Dia</option>
+                    </select>
+                </div>
+                <div class="col-md-2 needs-validation">
+                    <select class="form-select mb-4" id="mes" required>
+                        <option selected disabled value="">Mês</option>
+                    </select>
+                </div>
+                <div class="col-md-2 needs-validation">
+                    <select class="form-select mb-4" id="ano" required>
+                        <option selected disabled value="">Ano</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <select class="form-select mb-6" id="tipo" required>
+                        <option selected disabled value="">Tipo</option>
+                        <option value="Alimentação">Alimentação</option>
+                        <option value="Lazer">Lazer</option>
+                    </select>
+                </div>
+            </div>
             
+
+            <!-- ENTRADAS PARA OS DADOS DA DESPESA -->
+            <div class="row d-flex justify-content-center gx-md-4">
+                <div class="col-md-6">
+                    <form class="form-floating mb-4 validacoes">
+                        <input class="form-control" id="cmp-descricao" type="text" placeholder="Descrição">
+                        <label for="cmp-descricao">Descrição</label>
+                    </form>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <form class="form-floating">
+                        <input class="form-control" id="cmp-valor" type="text" placeholder="Valor">
+                        <label for="cmp-valor">Valor</label>
+                    </form>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary d-flex justify-content-center align-items-center w-100" onclick="setFiltrarDespesa()"><i class="bi bi-search fs-3 me-2 ms-2"></i>Pesquisar</button>
+                </div>
+            </div>
         </div>
     </section>
 
-    
+    <!-- TABELA DE DADOS -->
+    <section id="tabela-registros">
+        <div class="container">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <td>Data</td>
+                        <td>Tipo</td>
+                        <td>Descrição</td>
+                        <td>Valor</td>
+                    </tr>
+                </thead>
+                <tbody id="lista-despesas">
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
     <footer>
         <hr class="d-block mb-3">
         <div class="container">
@@ -91,7 +155,6 @@
             </div>
         </div>
     </footer>
-
 
     <!-- Arquivos JS padrões -->
     <script src="js/scripts.js"></script>

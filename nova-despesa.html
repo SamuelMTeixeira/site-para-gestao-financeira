@@ -48,7 +48,7 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav ms-auto" >
                             <li class="nav-item me-md-3"><a class="nav-link text-dark" href="area-principal.html">Home</a></li>
-                            <li class="nav-item me-md-3"><a class="nav-link text-dark" href="">Minhas finanças</a></li>
+                            <li class="nav-item me-md-3"><a class="nav-link text-dark" href="ver-financas.html">Minhas finanças</a></li>
                             <li class="nav-item me-md-3"><a class="nav-link text-dark" href="nova-despesa.html">Nova despesa</a></li>
                         </ul>
                     </div>
@@ -60,11 +60,11 @@
     <!-- area inicial-->
     <section>
         <div class="container mt-5">
-            <h1 class="display-6 text-center mb-4">Registro de nova despesa</h1>
+            <h1 class="display-6 text-center mb-3 mb-md-5">Registro de nova despesa</h1>
 
             <!-- SELECTS PARA OS FILTROS DE CADASTRO -->
-            <div class="row">
-                <div class="col-md-3 needs-validation">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-5 needs-validation">
                     <select class="form-select mb-4" id="ano" required >
                         <option selected disabled value="">Ano</option>
                     </select>
@@ -72,12 +72,15 @@
                         Selecione um ano primeiro
                     </div>
                 </div>
-                <div class="col-md-2 needs-validation">
+                <div class="col-md-5 needs-validation">
                     <select class="form-select mb-4" id="mes" required >
                         <option selected disabled value="">Mês</option>
                     </select>
                 </div>
-                <div class="col-md-2">
+            </div>
+            
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-5">
                     <select class="form-select mb-4" id="dia" required>
                         <option selected disabled value="">Dia</option>
                     </select>
@@ -92,7 +95,7 @@
             </div>
 
             <!-- ENTRADAS PARA OS DADOS DA DESPESA -->
-            <div class="row">
+            <div class="row d-flex justify-content-center">
                 <div class="col-md-5">
                     <form class="form-floating mb-4 validacoes">
                         <input class="form-control" id="cmp-descricao" type="text" placeholder="Descrição">
@@ -105,15 +108,18 @@
                         <label for="cmp-valor">Valor</label>
                     </form>
                 </div>
-                <div class="col-md-2 mb-4 d-flex justify-content-center">
-                    <button type="submit" class="btn btn-primary d-flex justify-content-center align-items-center" onclick="setCadastrarDespesas()"><i class="bi bi-plus-square-fill fs-3 me-2 ms-2"></i>Adicionar</button>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-2 d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary d-flex justify-content-center align-items-center w-100" onclick="setCadastrarDespesas()"><i class="bi bi-plus-square-fill fs-3 me-2 ms-2"></i>Adicionar</button>
                 </div>
             </div>
+
         </div>
     </section>
 
     <div class="d-none d-md-block">
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
     </div>
 
     <footer>
@@ -143,41 +149,23 @@
         </div>
     </footer>
 
-
-
     <!-- CAMPO MODAL BOOTSTRAP -->
-    <!-- MODAL ERRO -->
-    <div class="modal fade" id="erroNewRegistro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="modalRegistro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h5 class="modal-title d-flex align-items-center text-danger" id="staticBackdropLabel"><i class="fs-4 bi bi-exclamation-square me-2"></i> Impossível efetuar um novo registro</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div id="staticBackdropLabel" class="d-flex flex-row flex-wrap">
+                    
             </div>
-            <div class="modal-body">Ops... algum campo ficou vazio! preencha os lacunas vazias e tente novamente.</div>
+            <button type="button" class="btn-close" id="btn-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="texto-modal"></div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Corrigir</button>
+            <button type="button" class="btn" id="btn-fechar" data-bs-dismiss="modal">Corrigir</button>
             </div>
         </div>
         </div>
     </div>
-
-    <!-- MODAL SUCESSO -->
-    <div class="modal fade" id="sucessoNewRegistro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title d-flex align-items-center text-success" id="staticBackdropLabel">Registro efetuado com sucesso</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">Os dados foram salvos e registrados com sucesso!</div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Fechar</button>
-            </div>
-        </div>
-        </div>
-    </div>
-
 
     <!-- Arquivos JS padrões -->
     <script src="js/scripts.js"></script>
